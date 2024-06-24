@@ -1,0 +1,32 @@
+﻿<Window x:Class="babadzakisan.Windows.AddOrderWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:babadzakisan.Windows"
+        mc:Ignorable="d"
+        Title="Окно добавления, изменения заказа" Height="450" Width="800">
+    <Grid Background="#FFCFFFA7">
+        <Grid.RowDefinitions>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+        <RowDefinition Height="*"/>
+    </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Column="0" Text="Имя покупателя" FontWeight="Bold" FontFamily="Bahnschrift"/>
+        <TextBox  Background="#FFF7FD85" Width="150" Grid.Column="1" x:Name="customerNameTextBox" Margin="10" VerticalAlignment="Center"/>
+
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="1" Text="Выберите продукт" FontWeight="Bold" FontFamily="Bahnschrift"/>
+        <ComboBox  Background="#FFF7FD85"  Grid.Column="1" Grid.Row="1" x:Name="productsComboBox" DisplayMemberPath="ProductName" Margin="30"/>
+
+        <TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" Grid.Row="2" Text="Количество" FontWeight="Bold" FontFamily="Bahnschrift"/>
+        <TextBox  Background="#FFF7FD85" Width="150" VerticalAlignment="Center" Grid.Column="1" Grid.Row="2" x:Name="quantityTextBox" Margin="0,0,0,10"/>
+        <Button  Background="#FFF7FD85" Grid.ColumnSpan="2" Content="Добавить заказ" Grid.Row="3" HorizontalAlignment="Center" Height="60"  Width="140" Click="AddOrderButton_Click" FontFamily="Bahnschrift"/>
+    </Grid>
+
+</Window>
